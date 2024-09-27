@@ -3,13 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo.domicilio;
+import java.util.Scanner;
 
 /**
  *
  * @author NCAULA208
  */
 public class Domicilio {
-    
+
     private Ciudad ciudad;
     private String calle;
     private int nro;
@@ -18,6 +19,16 @@ public class Domicilio {
         this.ciudad = ciudad;
         this.calle = calle;
         this.nro = nro;
+    }
+
+    public static Domicilio crearDomicilio() {
+        Scanner scanDomicilio = new Scanner(System.in);
+        Ciudad ciudad = Ciudad.seleccionarCiudad();  // Método estático en Ciudad
+        System.out.println("Ingrese nombre de la calle");
+        String calle = scanDomicilio.nextLine();
+        System.out.println("Ingrese número de la calle");
+        int nro = scanDomicilio.nextInt();
+        return new Domicilio(ciudad, calle, nro);
     }
 
     public Ciudad getCiudad() {
@@ -43,6 +54,5 @@ public class Domicilio {
     public void setNro(int nro) {
         this.nro = nro;
     }
-    
-    
+
 }

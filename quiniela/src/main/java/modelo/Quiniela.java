@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package modelo;
+
+import principal.Principal;
 
 /**
  *
@@ -12,6 +9,7 @@ package modelo;
 public class Quiniela {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // Llamar al método principal del menú
+        Principal.main(args);  // Ejecuta el menú desde la clase Principal
     }
 }

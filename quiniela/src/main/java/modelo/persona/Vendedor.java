@@ -5,6 +5,7 @@
 package modelo.persona;
 
 import java.util.Date;
+import java.util.Scanner;
 import modelo.domicilio.Domicilio;
 import modelo.persona.quiniela.Sucursal;
 import repositorio.RepositorioQuiniela;
@@ -49,6 +50,26 @@ public class Vendedor extends Persona {
     public void setSucursal(Sucursal sucursal) {
         this.sucursal = sucursal;
     }
+
+public static Vendedor crearVendedor() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Ingrese el cuit vendedor");
+    String cuit = scanner.nextLine();
+    System.out.println("Ingrese el nombre del vendedor");
+    String nombre = scanner.nextLine();
+    System.out.println("Ingrese el apellido del vendedor");
+    String apellido = scanner.nextLine();
+    System.out.println("Ingrese el dni del vendedor");
+    int dni = scanner.nextInt();
+    scanner.nextLine();  // Limpiar el buffer
+    System.out.println("Crear domicilio");
+    Domicilio domi = Domicilio.crearDomicilio();
+    
+    // Seleccionar sucursal
+    Sucursal sucursal = Sucursal.seleccionarSucursal(); // Selección de sucursal existente
+
+    return new Vendedor(cuit, sucursal, nombre, apellido, dni, domi);
+}
 
     @Override
     public String generarCodigo() {

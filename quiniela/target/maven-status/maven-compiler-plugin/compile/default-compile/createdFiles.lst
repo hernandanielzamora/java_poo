@@ -1,5 +1,9 @@
 modelo\domicilio\Domicilio.class
-modelo\domicilio\Ciudad.class
+modelo\Quiniela.class
 modelo\persona\quiniela\Sucursal.class
 modelo\persona\Vendedor.class
+modelo\persona\Cliente.class
 modelo\persona\Persona.class
+modelo\persona\quiniela\Quiniela.class
+modelo\domicilio\Ciudad.class
+modelo\apuesta\Apuesta.class
